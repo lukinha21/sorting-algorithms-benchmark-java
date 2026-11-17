@@ -162,11 +162,12 @@ public class Lista {
             int pos = buscaBinaria(chave, idx);
 
             No j = i;
+            int k = idx;
             // move os elementos para frente até a posição correta
-            while (idx > pos) {
+            while (k > pos) {
                 j.setInfo(j.getAnt().getInfo());
                 j = j.getAnt();
-                idx--;
+                k--;
             }
 
             j.setInfo(chave);
